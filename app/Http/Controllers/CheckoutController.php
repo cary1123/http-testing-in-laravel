@@ -25,10 +25,7 @@ class CheckoutController extends Controller
             'totalCount' => $totalCount,
             'totalAmount' => $totalAmount,
         ];
-        /* $data = [
-           'totalCount' => $totalCount,
-           'totalAmount' => $totalAmount,
-         ];*/
+
 
          return view('checkout.index',$data);
     }
