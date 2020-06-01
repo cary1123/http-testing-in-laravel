@@ -3,8 +3,9 @@
 namespace Tests\Feature;
 
 use App\Services\Article;
-use App\Services\Cart;
+
 use App\Product;
+use App\Services\Cart;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -20,14 +21,6 @@ class CheckoutControllerTest extends TestCase
      */
     public function testExample()
     {
-        $target = new Cart();
-        $product1 = new Article(20);
-        $product2 = new Article(30);
-        $product3 = new Article(50);
-
-        $target->add($product1);
-        $target->add($product2);
-        $target->add($product3);
 
         factory(Product::class)->create(['price' => 20]);
         factory(Product::class)->create(['price' => 30]);
